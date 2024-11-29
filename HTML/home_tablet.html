@@ -1,0 +1,127 @@
+<!DOCTYPE dhtml>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet"  type = "text/css" href = "css/Folder_css.css">
+    <script src="js_script/updateClock.js"></script>
+</head>
+<body>
+    <script src="js_script/high_panel.js"></script>
+    <div class="high_panel" onclick="toggleHighPanel()">
+        <img class="hp_info" src="image/hight_info_panel.png" alt="Информация">
+        <div id="clock"></div>
+        <div id="dateDisplay"></div>
+        <script src="js_script/hp_vidgets.js"></script>
+    </div>
+    <p><img class="imgsize" src="image/Tablet_background_002.png" alt="Задний фон"></p>
+    <div class = "container_upper">
+        <script>
+            var jsonData = [
+                {
+                    "name": "Blindozer Diagnostic",
+                    "icon_app": "image/Blindozer_Test_icon.png",
+                    "link": "apps/BlDi/home_bidi.html"
+                },
+                {
+                    "name": "Компас",
+                    "icon_app": "image/Compas_icon.png"
+                },
+                {
+                    "name": "Настройки",
+                    "icon_app": "image/nistroiki_icon.png"
+                },
+                {
+                    "name": "Змейка",
+                    "icon_app": "image/zmeika_icon.png",
+                    "link": "apps/Za/home_Za.html"
+                },
+                {
+                    "name": "Блокировка экрана",
+                    "icon_app": "image/locket_icon.png"
+                },
+                {
+                    "name": "Браузер",
+                    "icon_app": "image/Explorer_icon.png"
+                }
+            ];
+
+    jsonData.forEach(function(item) {
+        var buttonContainer = document.createElement("div");
+        buttonContainer.className = "container_app";
+
+        var button = document.createElement("button");
+        button.className = "button_app";
+        button.style.backgroundImage = 'url(' + item.icon_app + ')';
+        button.style.backgroundSize = 'cover';
+        button.onclick = function() {
+            if (item.link) {
+                window.location.href = item.link;
+            }
+        };
+
+        var span = document.createElement("span");
+        span.className = "mySpan";
+        span.textContent = item.name;
+
+        buttonContainer.appendChild(button);
+        buttonContainer.appendChild(span);
+
+        document.querySelector('.container_upper').appendChild(buttonContainer);
+    });
+        </script>
+    </div>
+    <div class = "container_average">
+        <script>
+            var page = [
+            {
+                'name' : "page"
+            },
+            {
+                'name' : "page"
+            }
+            ];
+            page.forEach(function(item) {
+
+            var buttonCircle = document.createElement("button");
+            buttonCircle.className = "circle";
+
+            document.querySelector('.container_average').appendChild(buttonCircle);
+            });
+        </script>
+    </div>
+    
+    <div class = "container_lower">
+        <script>
+            var jsonData1 = [
+                {
+                    "name": "Звонки",
+                    "icon_app": "image/Calls.png"
+                },
+                {
+                    "name": "Контакты",
+                    "icon_app": "image/Number.png"
+                },
+                {
+                    "name": "Сообщения",
+                    "icon_app": "image/Message.png"
+                },
+                {
+                    "name": "Камера",
+                    "icon_app": "image/Camera.png"
+                }
+            ];
+
+            jsonData1.forEach(function(item) {
+
+            var button = document.createElement("button");
+            button.className = "button_app_lower";
+            button.style.backgroundImage = 'url(' + item.icon_app + ')';
+            button.style.backgroundSize = 'cover';
+
+            document.querySelector('.container_lower').appendChild(button);
+            });
+        </script>
+    </div>
+</body>
+</html>
