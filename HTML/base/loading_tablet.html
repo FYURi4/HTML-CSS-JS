@@ -1,0 +1,32 @@
+<!DOCTYPE dhtml>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка</title>
+    <style>
+        .imgsize {
+            width: auto;
+            height: auto;
+        }
+        .imgsize1 {
+            width: 60px; /* Добавлено 'px' для единиц измерения */
+            height: 60px; /* Добавлено 'px' для единиц измерения */
+            position: absolute;
+            top: 350px;
+            left: 180px;
+        }
+    </style>
+    <script>
+        // Устанавливаем таймер на 2 секунды
+        setTimeout(function() {
+          // Переходим на новую страницу
+          window.location.href = 'apps/BiDi/home_bidi.html';
+        }, 2000); // 2000 миллисекунд = 2 секунды
+    </script>
+</head>
+<body>
+    <p><img class="imgsize" src="image/Load_Screen.png" alt="Инфекция ГОЙДА"></p>
+    <p><img class="imgsize1" src="image/loading-96.gif" alt="Загрузка"></p>
+</body>
+</html>
