@@ -1,0 +1,69 @@
+<!DOCTYPE dhtml>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .imgsize {
+        width: auto;
+        height: auto;
+        border-radius: 23px;
+    }
+    .p1 {
+        width: 394px;
+        height: 520px;
+        position: absolute;
+        top: 66px;
+        left: 11px;
+        border-radius: 0px 0px 14px 14px;
+        background-color: #B8B8B8;
+    }
+    .zagolovok_p1 {
+        width: 394px;
+        height: 13px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: #CD9F4A;
+    }
+    .con_p1_button {
+        width: 394px;
+        height: 18px;
+        position: absolute;
+        top: 13px;
+        left: 0px;
+        text-align: center;
+        background-color: #B8B8B8;
+    }
+    .blu_sky {
+        width: 394px;
+        height: 489px;
+        position: absolute;
+        top: 31px;
+        left: 0px;
+        border-radius: 0px 0px 14px 14px;
+        background-color: #0015F8;
+    }
+    .button_p1 {
+        width: 192px;
+        height: 14px;
+        border: none;
+        font-size: 12;
+        text-align: center;
+        background-color: #C3C2C2;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    }
+</style>
+</head>
+<body>  
+    <div class = "imgsize" style = "background-color: #BFBDBD"> </div>
+    <div class = "p1">
+        <div class = "blu_sky"></div>
+        <div class = "con_p1_button">
+            <button class = "button_p1" style="background-color: #FFC300">ТЕХНИЧЕСКОЕ СОСТОЯНИЕ</button>
+            <button class = "button_p1">СОСТОЯНИЕ ПРОДУКТОВ</button>
+        </div>
+        <div class = "zagolovok_p1"></div>
+    </div>
+</body>
+</html>
