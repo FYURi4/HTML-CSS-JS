@@ -1,0 +1,49 @@
+<!DOCTYPE dhtml>
+<html>
+<head>
+    <style>
+            ::-webkit-scrollbar {
+            width: 0;
+            }
+            .imgsize{
+                width: auto;
+                height: auto;
+            }
+            .button_info{
+                width: 85.44px;
+                height: 85.44px;
+                position: absolute;
+                left: 165px;
+                top: 460px;
+                background-color: Transparent;
+                background-repeat:no-repeat;
+                background-image: url('image/Tablet_Screen_Lock.png');
+                background-size: cover;
+                cursor: pointer;
+                border: none;
+            }
+            #clock {
+                font-size: 80px;
+                font-family: 'Arial';
+                color: #ffffff;
+                text-align: center;
+                margin-top: -470px;
+            }
+    </style>
+    <script type="text/javascript">
+        function updateClock() {
+          var date = new Date();
+          var hours = date.getHours();
+          var minutes = date.getMinutes();
+          var time = hours + ":" + minutes;
+          document.getElementById("clock").innerHTML = time;
+        }
+        setInterval(updateClock, 1000); // Обновление каждую секунду
+      </script>
+</head>
+<body>
+    <img class = "imgsize" src="image/Tablet_background_001.png" alt = "Задний фон" >
+    <a href = "home_tablet.html"  class = "button_info" type: = "button" name = "button"></a>
+    <div id="clock"></div>
+</body>
+</html>
