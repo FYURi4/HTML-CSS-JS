@@ -1,15 +1,348 @@
+/* Подгонка изображения */
+
 .imgsize {
+    width: auto;
+    height: auto;
+}
+
+.imgsize1 {
     width: auto;
     height: auto;
     border-radius: 23px;
 }
-.imgsize1 {
+.imgsize2 {
     width: 233.57px;
     height: 65px;
     position: absolute;
     top: 67px;
     left: 87px;
 }
+/* Контейнер под приложения --home_tablet-- */
+
+.container_upper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 255, 0);
+    text-align: center; 
+    width: 400px; 
+    height: 430px;
+    position: absolute;
+    top: 38px;
+    left: 0px;
+}
+
+/* Контейнер с иконкой и названием для container_upper --home_tablet-- */
+
+.container_app {
+    background-color: rgba(97, 97, 97, 0);
+    width: 50px;
+    height: 66px; 
+    margin-left: 20px;
+    margin-top: 3px;
+
+}
+
+.container_app:active { 
+    transform: scale(0.9);
+    filter: grayscale(40%);
+} 
+
+/* Иконка приложения */
+
+.button_app {
+    background-color: #f0f0f0;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+/* Контейнер, для кол-во главных экранов */
+
+.container_average {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgba(255, 255, 255, 0);
+    width: 400px; /* добавлены единицы измерения */
+    height: 15px; /* уменьшена высота для кнопок */
+    position: absolute;
+    top: 475px;
+    left: 8px;
+}
+
+/* Круг,для контейнера average */
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(146, 146, 146);
+    background-size: cover;
+    border: none;
+    margin-left: 10px;
+}
+
+/* Контейнер, для иконок */
+
+.container_lower {
+    display: flex; /* Устанавливаем Flexbox */
+    flex-wrap: wrap; /* Позволяет кнопкам переноситься на следующую строку при недостатке места */
+    justify-content: center; /* Центрируем кнопки по горизонтали */
+    background-color: rgba(255, 0, 0, 0);
+    text-align: center; 
+    width: 400px; /* добавлены единицы измерения */
+    height: 50px; /* уменьшена высота для кнопок */
+    position: absolute;
+    top: 500px;
+    left: 8px;
+}
+
+/* Кнопки, для контейнера снизу container_lower*/
+
+.button_app_lower{
+    background-color: #f0f0f0;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    margin-left: 20px;
+}
+.button_app_lower:active { 
+    transform: scale(0.9);
+    filter: grayscale(40%);
+} 
+
+/* Контейнер, для панели сверху */
+
+.high_panel {
+    width: 400px;
+    height: 23px;
+    background-color: #4e4e4e59;
+    position: absolute;
+    border-radius: 25px 25px 0px 0px;
+    cursor: pointer; /* Указатель для интерактивности */
+    transition: height 0.1s; /* Плавный переход */
+}
+
+/* Информация на high_panel */
+
+.hp_info {
+    width: 103px;
+    height: 15px;
+    position: absolute; 
+    top: 4px;
+    left: 274px;
+}
+
+/* Часы */
+
+#clock {
+    font-size: 20px;
+    font-family: 'Arial';
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 26px; 
+    top: 1px;
+}
+
+/* Дата на high_panel */
+
+#dateDisplay {
+    font-size: 20px;
+    color: black;
+    font-family: 'Arial';
+    display: none; /* Скрыть по умолчанию */
+}
+
+/* Шрифт */
+
+@font-face {
+    font-family: 'JPurva';
+    src: url('font/JPurva.ttf');
+}
+
+/* Размер шрифта */
+
+.mySpan {
+    font-size: 10px;
+    color: white;
+}
+
+
+
+.high_panel {
+    width: 400px;
+    height: 23px;
+    background-color: #4e4e4e59;
+    position: absolute;
+    border-radius: 25px 25px 0px 0px;
+    cursor: pointer; /* Указатель для интерактивности */
+    transition: height 0.1s; /* Плавный переход */
+    z-index: 999;
+    backdrop-filter: blur(10px)
+}
+
+
+
+.hp_info {
+    width: 103px;
+    height: 15px;
+    position: absolute; 
+    top: 4px;
+    left: 270px;
+}
+
+
+
+#clock {
+    font-size: 20px;
+    font-family: 'Arial';
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 26px; 
+    top: 0px;
+}
+
+
+
+#dateDisplay {
+    font-size: 17px;
+    color: rgb(224, 224, 224);
+    font-family: 'Arial';
+    display: none; /* Скрыть по умолчанию */
+    position: absolute;
+    left: 140px; 
+    top: 64px;
+}
+
+
+
+#hp_mico_container {
+    width: 344px;
+    height: 380px;
+    background-color: rgba(38, 0, 255, 0);
+    position: absolute;
+    left: 28px; 
+    top: 91px;
+    display: none;
+    
+}
+
+
+
+    .hp_button_tuch {
+        width: 175px;
+        height: 70px;
+        background-color: #e7e7e79a;
+        position: absolute;
+        left: 0px; 
+        top: 0px;
+        border-radius: 14px;
+        border: none;
+    }
+
+    .hp_button_tuch:active {
+        transform: scale(0.98);
+        filter: grayscale(40%);
+    }
+
+
+    
+    .hp_button_scroller {
+        width: 60px;
+        height: 162px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        left: 284px; 
+        top: 0px;
+        border-radius: 14px;
+        border: none;
+    }
+
+
+
+    .hp_mico_container_mico {
+        width: 344px;
+        height: 203px;
+        background-color: rgba(0, 255, 76, 0);
+        position: absolute;
+        left: 0px; 
+        top: 162;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+
+        .hp_button_circle_tuch_container {
+            width: 60px;
+            height: 83px;
+            background-color: #ff000000;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column; /* Кнопки в столбец */
+            justify-content: flex-start; /* Выравнивание по верхнему краю */
+            align-items: center; /* Центрируем содержимое по горизонтали */
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+
+
+            .hp_button_circle_tuch {
+                width: 60px;
+                height: 60px;
+                background-color: #b4b4b486;
+                border-radius: 40px;
+                border: none;
+                
+            }
+
+            .hp_button_circle_tuch:active {
+                transform: scale(0.98);
+                filter: grayscale(40%);
+            }
+
+
+
+            .button_label {
+                display: block; /* Делаем надпись блочным элементом */
+                margin-top: 65px; /* Отступ сверху для разделения с кругом */
+                margin-left: -3px;
+                font-family: 'Arial';
+                color: #ffffff;
+                font-size: 12px; /* Убрали кавычки */
+                position: absolute; /* Это может повлиять на поведение элемента */
+                text-align: center;
+                width: 17%; /* Убедитесь, что ширина достаточна для переноса текста */
+                word-wrap: break-word; /* Позволяет переносить длинные слова */
+                overflow-wrap: break-word; /* Альтернативное свойство для переноса текста */
+            }
+
+
+
+    .hp_mico_container_layer {
+        width: 344px;
+        height: 15px;
+        background-color: rgb(255, 38, 0);
+        position: absolute;
+        left: 0px; 
+        top: 365px;
+    }
+
+
 
 .container {
     width: 248px;
@@ -23,6 +356,8 @@
     align-items: center; /* Центрирование по вертикали */
     flex-direction: column; /* Кнопки в столбец */
 }
+
+
 
 .button1 {
     width: 241px;
@@ -41,10 +376,14 @@
     line-height: 20px; /* Текст по вертикали в центре */
 }
 
+
+
 .button1:active { 
     transform: scale(0.9);
     filter: grayscale(40%);
 }
+
+
 
 .button2 {
     width: 241px;
@@ -63,47 +402,9 @@
     line-height: 20px; /* Текст по вертикали в центре */
 }
 
-.high_panel {
-    width: 400px;
-    height: 23px;
-    background-color: #4e4e4e59;
-    position: absolute;
-    border-radius: 25px 25px 0px 0px;
-    cursor: pointer; /* Указатель для интерактивности */
-    transition: height 0.1s; /* Плавный переход */
-    z-index: 999;
-    backdrop-filter: blur(10px)
-}
 
-.hp_info {
-    width: 103px;
-    height: 15px;
-    position: absolute; 
-    top: 4px;
-    left: 274px;
-}
-
-#clock {
-    font-size: 20px;
-    font-family: 'Arial';
-    color: #ffffff;
-    text-align: center;
-    position: absolute;
-    left: 26px; 
-    top: 0px;
-}
-
-#dateDisplay {
-    font-size: 17px;
-    color: rgb(224, 224, 224);
-    font-family: 'Arial';
-    display: none; /* Скрыть по умолчанию */
-    position: absolute;
-    left: 140px; 
-    top: 54px;
-}
 
 @font-face {
     font-family: 'JPurva';
-    src: url('font/JPurva.ttf');
+    src: url('../font/JPurva.ttf');
 }
