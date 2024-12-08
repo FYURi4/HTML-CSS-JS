@@ -8,13 +8,13 @@
 </head>
 <body>
     <script src="js_script/high_panel.js"></script>
-    <div class="high_panel" onclick="toggleHighPanel()">
-        <img class="hp_info" src="image/hight_info_panel.png" alt="Информация">
-        <div id="clock"></div>
-        <div id="dateDisplay"></div>
+    <div class="high_panel copirating_disable" onclick="toggleHighPanel()">
+        <img class="hp_info copirating_disable" src="image/hight_info_panel.png" alt="Информация">
+        <div id="clock" class = "copirating_disable"></div>
+        <div id="dateDisplay" class = "copirating_disable"></div>
         <script src="js_script/hp_vidgets.js"></script>
     </div>
-    <p><img class="imgsize" src="image/Tablet_background_002.png" alt="Задний фон"></p>
+    <p><img class="imgsize copirating_disable" src="image/Tablet_background_002.png" alt="Задний фон"></p>
     <div class = "container_upper">
         <script>
             var jsonData = [
@@ -23,23 +23,13 @@
                     "icon_app": "image/Blindozer_Test_icon.png",
                     "link": "apps/BlDi/home_bidi.html"
                 },
-                {
-                    "name": "Компас",
-                    "icon_app": "image/Compas_icon.png"
-                },
-                {
-                    "name": "Настройки",
-                    "icon_app": "image/nistroiki_icon.png"
-                },
+
                 {
                     "name": "Змейка",
                     "icon_app": "image/zmeika_icon.png",
                     "link": "apps/Za/home_Za.html"
                 },
-                {
-                    "name": "Блокировка экрана",
-                    "icon_app": "image/locket_icon.png"
-                },
+            
                 {
                     "name": "Браузер",
                     "icon_app": "image/Explorer_icon.png"
@@ -61,7 +51,7 @@
         };
 
         var span = document.createElement("span");
-        span.className = "mySpan";
+        span.className = "mySpan copirating_disable";
         span.textContent = item.name;
 
         buttonContainer.appendChild(button);
@@ -74,9 +64,6 @@
     <div class = "container_average">
         <script>
             var page = [
-            {
-                'name' : "page"
-            },
             {
                 'name' : "page"
             }
