@@ -3,6 +3,7 @@ function toggleHighPanel() {
     var hpInfo = document.querySelector('.hp_info');
     var dateDisplay = document.getElementById("dateDisplay");
     var hpMicoContainer = document.getElementById("hp_mico_container");
+    var hpMicoContainerMicoTwo = document.getElementById("hp_mico_container_mico_two");
     var clock = document.getElementById("clock");
 
     // Проверяем текущее состояние панели
@@ -18,6 +19,8 @@ function toggleHighPanel() {
         // Скрыть дату
         dateDisplay.style.display = 'none';
         hpMicoContainer.style.display = 'none';
+        hp_mico_container_info.style.display = 'none';
+        hpMicoContainerMicoTwo.style.display = 'none';
 
     } else {
         // Открытие панели
